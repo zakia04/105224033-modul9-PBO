@@ -6,6 +6,4 @@ class Ruangan {
         this.noReg = noReg;
         this.kapasitas = kapasitas;
     }
-
-
 }

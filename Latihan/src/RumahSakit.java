@@ -1,6 +1,7 @@
+import java.util.ArrayList;
 class RumahSakit {
     final Ruangan[] daftarRuangan;
-    Dokter[] daftarDokter;
+    ArrayList<Dokter> daftarDokter = new ArrayList<>();
 
     public RumahSakit() {
         this.daftarRuangan = new Ruangan[2];
@@ -15,8 +16,13 @@ class RumahSakit {
     }
 
     public void addDokter(Dokter dr){
-        this.daftarDokter = new Dokter[];
+       this.daftarDokter.add(dr);
     }
-    
+
+    public void infoDokter(){
+        for (int i = 0; i < daftarDokter.size(); i++) {
+            System.out.println("Dokter " + daftarDokter.get(i).nama + " adalah seorang spesialis " + daftarDokter.get(i).spesialis);
+        }
+    }
 
 }
